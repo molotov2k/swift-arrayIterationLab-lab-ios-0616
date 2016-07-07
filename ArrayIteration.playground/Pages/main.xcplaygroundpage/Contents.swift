@@ -15,7 +15,7 @@
  */
 // write your code here
 
-
+var cart: [String] = ["Chips", "Salsa", "Guacamole", "Red wine"]
 
 
 
@@ -25,7 +25,7 @@
  */
 // write your code here
 
-
+let numbersFromOneToTen: [Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 
 
@@ -36,7 +36,9 @@
  */
 // write your code here
 
-
+for number in numbersFromOneToTen {
+    print(number)
+}
 
 
 
@@ -47,7 +49,9 @@
  */
 // write your code here
 
-
+for item in cart {
+    print("The cart contains \(item)")
+}
 
 
 
@@ -58,7 +62,9 @@
  */
 // write your code here
 
-
+for item in cart {
+    print(item)
+}
 
 
 
@@ -69,7 +75,15 @@
  */
 // write your code here
 
-
+func greetings(names: [String]) {
+    for person in names {
+        if person == "Michael" {
+            print("Top of the morning \(person)")
+        } else {
+            print("Good morning \(person)")
+        }
+    }
+}
 
 
 
@@ -80,9 +94,19 @@
 // write your code here
 
 
+func filter(numbers: [Int]) -> [Int] {
+    var numbersLessThanFifty: [Int] = []
+    for number in numbers {
+        if number < 50 {
+            numbersLessThanFifty.append(number)
+        }
+    }
+    return numbersLessThanFifty
+}
 
+let Ints = [40, 60, 50, 52, 59, 13, 90, 100, 5, 52, 51, 49]
 
-
+filter(Ints)
 
 
 
